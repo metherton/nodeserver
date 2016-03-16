@@ -9,9 +9,9 @@ var app = express();
 
 app.use(morgan('dev'));
 
-var dishRouter = require('./dishRouter')(express);
-var promoRouter = require('./promoRouter')(express);
-var leaderRouter = require('./leaderRouter')(express);
+var dishRouter = require('./dishRouter');
+var promoRouter = require('./promoRouter');
+var leaderRouter = require('./leaderRouter');
 
 app.use('/dishes',dishRouter);
 app.use('/promotions',promoRouter);
